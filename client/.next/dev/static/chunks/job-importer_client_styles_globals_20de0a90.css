@@ -1,0 +1,136 @@
+/* [project]/job-importer/client/styles/globals.css [client] (css) */
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #2563eb;
+  --white: #e6eef6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#071022 0%, #071828 100%);
+  margin: 0;
+  padding: 24px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.actions {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  transition: all .15s;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  box-shadow: 0 6px 20px #2563eb1f;
+}
+
+.alert {
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+}
+
+.alert-success {
+  color: #a7f3d0;
+  background: #063c17;
+}
+
+.alert-error {
+  color: #fca5a5;
+  background: #2b0b0b;
+}
+
+.center {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px;
+}
+
+.table-wrap {
+  background: #ffffff08;
+  border-radius: 12px;
+  padding: 16px;
+  overflow: auto;
+  box-shadow: 0 8px 30px #02061799;
+}
+
+.log-table {
+  border-collapse: collapse;
+  width: 100%;
+  color: var(--white);
+  min-width: 900px;
+}
+
+.log-table th {
+  text-align: left;
+  color: var(--muted);
+  border-bottom: 1px solid #ffffff0a;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.log-table td {
+  vertical-align: top;
+  border-bottom: 1px dashed #ffffff08;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.footer {
+  color: var(--muted);
+  text-align: right;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=job-importer_client_styles_globals_20de0a90.css.map*/
