@@ -1,4 +1,4 @@
-# 🧱 Job Importer Project
+# Job Importer Project
 
 ## Overview
 Job Importer automatically fetches jobs from multiple XML feeds, converts them to JSON, queues them in Redis using BullMQ, and stores them in MongoDB. It includes a Next.js dashboard to view import logs and manually trigger imports.
@@ -92,6 +92,7 @@ GET http://localhost:5000/api/jobs/logs
 
 share a screenshot
 <img width="1904" height="978" alt="image" src="https://github.com/user-attachments/assets/715def09-35c1-47c6-b1da-1640c397b4a1" />
+
 
 
 
