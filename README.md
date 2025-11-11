@@ -32,38 +32,6 @@ cd job-importer/server
 
 ---
 
-## Folder Structure
-
-job-importer/
-├── server/ # Backend
-│ ├── src/
-│ │ ├── app.js
-│ │ ├── config/
-│ │ │ ├── db.js
-│ │ │ └── redis.js
-│ │ ├── models/
-│ │ │ ├── Job.js
-│ │ │ └── ImportLog.js
-│ │ ├── services/jobService.js
-│ │ ├── controllers/jobController.js
-│ │ ├── routes/jobRoutes.js
-│ │ ├── queue/jobQueue.js
-│ │ ├── workers/jobWorker.js
-│ │ ├── cron/jobCron.js
-│ │ └── utils/xmlToJson.js
-│ ├── .env
-│ └── package.json
-└── client/ # Frontend (Next.js)
-├── pages/
-│ ├── index.js
-│ └── _app.js
-├── components/LogTable.js
-├──styles/globals.css
-├──.env.local
-├──next.config.js
-├──package-lock.json
-└── package.json
-
 
 ## Backend Setup
 
@@ -122,50 +90,9 @@ GET http://localhost:5000/api/jobs/logs
 
 
 
-Workflow Diagram
-+-------------------+
-|  XML Job Feeds    |  <-- multiple URLs (jobicy.com, higheredjobs.com)
-+-------------------+
-           |
-           v
-+-------------------+
-| fetchJobsAndQueue |
-|  (jobService.js)  |
-+-------------------+
-           |
-           | Adds each job to
-           v
-+-------------------+
-|   BullMQ Queue    |
-|   (jobQueue.js)   |
-+-------------------+
-           |
-           v
-+-------------------+
-|    Worker         |
-|  (jobWorker.js)   |
-|  - Process each   |
-|    job            |
-|  - Insert/Update  |
-|    MongoDB Job    |
-+-------------------+
-           |
-           v
-+-------------------+
-|  MongoDB Job      |  <-- Jobs stored
-+-------------------+
-           |
-           v
-+-------------------+
-|  ImportLog        |  <-- Log after queue drained
-|  (ImportLog.js)   |
-+-------------------+
-           |
-           v
-+-------------------+
-| GET /api/jobs/logs |  <-- Check logs via Postman/frontend
-+-------------------+
+share a screenshot
 <img width="1904" height="978" alt="image" src="https://github.com/user-attachments/assets/715def09-35c1-47c6-b1da-1640c397b4a1" />
+
 
 
 
